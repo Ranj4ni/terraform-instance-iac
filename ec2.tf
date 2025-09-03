@@ -7,6 +7,9 @@ resource "aws_instance" "web" {
     }
 }
 # simple  creation of ec2
+provider "aws" {
+  region  = "us-west-1"
+}
 resource "aws_instance" "web" {
     ami = "ami-0d6b57555f03e6be8"
     instance_type = "t2.small"
